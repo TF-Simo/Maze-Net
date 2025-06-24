@@ -1,0 +1,48 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>de.fhac.pp.mazenet.airy</groupId>
+  <artifactId>Maze</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+  	<properties>
+		<main.class>sclient.mazenet.ClientMain</main.class>
+		<java.version>14</java.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>${java.version}</maven.compiler.source>
+		<maven.compiler.target>${java.version}</maven.compiler.target>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>de.fhac.mazenet</groupId>
+			<artifactId>maze-server</artifactId>
+			<version>v2019.4</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.xml.bind</groupId>
+			<artifactId>jaxb-api</artifactId>
+			<version>2.3.1</version>
+		</dependency>
+	</dependencies>
+	<build>
+		<defaultGoal>exec:java</defaultGoal>
+		<plugins>
+			<!-- mvn clean compile exec:java -->
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<version>1.6.0</version>
+				<configuration>
+					<mainClass>${main.class}</mainClass>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.1</version>
+				<configuration>
+					<release>${java.version}</release>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

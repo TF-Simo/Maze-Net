@@ -1,0 +1,47 @@
+# Ignore IntelliJ IDEA project files
+.idea/
+*.iml
+*.iws
+
+# Ignore Eclipse project files
+.project
+.classpath
+.settings/
+
+# Ignore Maven build output
+target/
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore log files
+*.log
+
+# Ignore temporary files
+*.tmp
+*.bak
+
+# Ignore compiled Java files
+*.class
+
+# Ignore dependency directories
+node_modules/
+
+# Ignore configuration files
+*.local
+*.env
+
+# Ignore IDE-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.swp
+*.swo
+
+# Exclude the following directories but keep files under src/
+!src/
+!src/main/
+!src/main/java/
+!src/main/java/sclient/
